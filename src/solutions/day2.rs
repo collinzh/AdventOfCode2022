@@ -7,6 +7,7 @@ const SCORE_WIN: i32 = 6;
 const SCORE_DRAW: i32 = 3;
 const SCORE_LOSE: i32 = 0;
 
+#[derive(Debug)]
 struct Round {
     my: String,
     oppo: String,
