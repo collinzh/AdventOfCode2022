@@ -11,6 +11,23 @@ where
     io::BufReader::new(file).lines()
 }
 
+pub fn read_lines_unwrapped<P>(filename: P) -> Vec<String>
+where
+    P: AsRef<Path>,
+{
+    let lines = read_lines(filename);
+    lines
+        .into_iter()
+        .filter(|l| l.is_ok())
+        .map(|l| l.unwrap())
+        .collect()
+}
+
+/// Returns true if supplied string is a number
+pub fn is_numeric(s: &str) -> bool {
+    s.parse::<i32>().is_ok()
+}
+
 #[allow(dead_code)]
 pub fn read_ints_file<P>(filename: P) -> Vec<i32>
 where

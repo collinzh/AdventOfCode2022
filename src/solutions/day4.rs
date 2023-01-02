@@ -35,6 +35,7 @@ impl Elf {
     }
 }
 
+#[allow(dead_code)]
 pub fn day4() {
     let lines = read_lines("day4.txt");
     let mut p1_count = 0;
