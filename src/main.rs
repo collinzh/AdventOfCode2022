@@ -7,5 +7,6 @@ fn main() {
     // solutions::day3::day3();
     // solutions::day4::day4();
     // solutions::day5::day5();
-    solutions::day6::day6();
+    // solutions::day6::day6();
+    solutions::day7::day7();
 }
